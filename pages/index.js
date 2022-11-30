@@ -3,7 +3,7 @@ export default function Home(props) {
 
   return (
     <>
-      <h1>Empty Next App</h1>
+      <h1>Working to make an example</h1>
     </>
   )
 }
