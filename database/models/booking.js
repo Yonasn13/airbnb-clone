@@ -1,3 +1,4 @@
+
 'use strict';
 import { Connection } from '../connection';
 const { Model, DataTypes } = require('sequelize');
@@ -26,4 +27,5 @@ const initBooking = (sequelize, DataTypes) => {
   return Booking;
 };
 
-export default initBooking(Connection, DataTypes)
+export default initUser(connection, DataTypes);
+

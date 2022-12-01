@@ -1,9 +1,11 @@
 
 export default function Home(props) {
-
   return (
     <>
-      <h1>Working to make an example</h1>
+      <h1>Home Page</h1>
     </>
   )
+
 }
+
+

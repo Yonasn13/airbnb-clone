@@ -1,3 +1,4 @@
+
 'use strict';
 import { Connection } from '../connection';
 const { Model, DataTypes } = require('sequelize');
@@ -25,3 +26,4 @@ const initUser = (sequelize, DataTypes) => {
 };
 
 export default initUser(Connection, DataTypes)
+
