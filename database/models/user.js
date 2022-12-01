@@ -1,6 +1,7 @@
-const { Model, DataTypes } = require('sequelize');
-import connection from '../connection';
 
+'use strict';
+import { Connection } from '../connection';
+const { Model, DataTypes } = require('sequelize');
 const initUser = (sequelize, DataTypes) => {
  class User extends Model {
    static associate(models) {
@@ -19,4 +20,5 @@ const initUser = (sequelize, DataTypes) => {
  return User;
 };
 
-export default initUser(connection, DataTypes);
+export default initUser(Connection, DataTypes)
+

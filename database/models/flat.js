@@ -1,6 +1,7 @@
-const { Model, DataTypes } = require('sequelize');
-import connection from '../connection';
 
+'use strict';
+import { Connection } from '../connection';
+const { Model, DataTypes } = require('sequelize');
 const initFlat = (sequelize, DataTypes) => {
  class Flat extends Model {
    static associate(models) {
