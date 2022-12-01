@@ -7,6 +7,9 @@ export default function Profile(props) {
             <h1>List of trips</h1>
             <ul>
                 <li>Rome, IT</li>
+                <li>Freetown, SL</li>
+                <li>Washington DC, USA</li>
+                <li>London, UK</li>
 
             </ul>
         </>
