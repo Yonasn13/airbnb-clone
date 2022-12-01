@@ -1,28 +1,10 @@
-import Image from 'next/image'
-import
 
+export default function Details(props) {
+    return (
+        <>
+            <h1>Flat Details</h1>
+        </>
+    )
 
-    function List() {
-        return (
-            <div>
-                <h1>List of Bookings</h1>
-                //<Image src={profilePic} alt="house on the beach" />
-
-                <div>
-                    <ul>
-                        <li>Clifonia, USA</li>
-                        <li>Freetown, SL</li>
-                        <li>Rome, IT</li>
-                        <li>Catania, IT</li>
-
-                    </ul>
-                </div>
-
-            </div>
-        );
-    }
-
-export default List;
-
-
+}
 

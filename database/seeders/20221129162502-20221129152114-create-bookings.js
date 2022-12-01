@@ -2,22 +2,23 @@
 
 /** @type {import('sequelize-cli').Migration} */
 module.exports = {
-  async up (queryInterface, Sequelize) {
+  async up(queryInterface, Sequelize) {
 
-     await queryInterface.bulkInsert('Bookings', [{
-       startDate: new Date('22-11-2022'),
-       endDate: new Date('25-11-2022'),
-       confirmed: true
-     }], {});
-    
+    await queryInterface.bulkInsert('Bookings', [{
+      id: 1,
+      UserId: 2,
+      FlatId: 1,
+      startDate: new Date('2022-12-15'),
+      endDate: new Date('2022-12-17'),
+      confirmed: true,
+      createdAt: new Date(),
+      updatedAt: new Date()
+    }], {});
+
   },
 
-  async down (queryInterface, Sequelize) {
-    /**
-     * Add commands to revert seed here.
-     *
-     * Example:
-     * await queryInterface.bulkDelete('People', null, {});
-     */
+  async down(queryInterface, Sequelize) {
+     await queryInterface.bulkDelete('Bookings', null, {});
+    
   }
 };

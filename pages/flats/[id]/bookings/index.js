@@ -1,9 +1,10 @@
-const List = () => {
+
+export default function Profile(props) {
     return (
-        <div>
-            <h1>List of Bookings</h1>
-        </div>
-    );
+        <>
+            <h1>List of trips</h1>
+        </>
+    )
+
 }
 
-export default List;
