@@ -1,16 +1,18 @@
-const { Model, DataTypes } = require('sequelize');
-import connection from '../connection';
 
+'use strict';
+import { Connection } from '../connection';
+const { Model, DataTypes } = require('sequelize');
 const initFlat = (sequelize, DataTypes) => {
  class Flat extends Model {
    static associate(models) {
      Flat.belongsTo(models.User);
+     Flat.belongsToMany(models.User, { through: models.Booking})
    }
  }
  Flat.init({
    address: DataTypes.STRING,
    price: DataTypes.FLOAT,
-   userId: DataTypes.INTEGER
+   UserId: DataTypes.INTEGER
  }, {
    sequelize,
    modelName: 'Flat',
@@ -18,4 +20,4 @@ const initFlat = (sequelize, DataTypes) => {
  return Flat;
 };
 
-export default initUser(connection, DataTypes);
+export default initFlat(connection, DataTypes);

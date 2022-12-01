@@ -2,15 +2,14 @@
 
 /** @type {import('sequelize-cli').Migration} */
 module.exports = {
-  async up(queryInterface, Sequelize) {
+  async up (queryInterface, Sequelize) {
 
-    await queryInterface.bulkInsert('People', [{
-      userId: '',
-      flatId: '',
-      startDate: ('2020-01-01'),
-      endDate: '',
-    }], {});
-
+     await queryInterface.bulkInsert('Bookings', [{
+       startDate: new Date('22-11-2022'),
+       endDate: new Date('25-11-2022'),
+       confirmed: true
+     }], {});
+    
   },
 
   async down(queryInterface, Sequelize) {
