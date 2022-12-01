@@ -5,6 +5,7 @@ const initUser = (sequelize, DataTypes) => {
  class User extends Model {
    static associate(models) {
      User.hasMany(models.Flat);
+     User.belongsToMany(models.Flat, { through: models.Booking})
    }
  }
  User.init({
