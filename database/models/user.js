@@ -14,7 +14,7 @@ const initUser = (sequelize, DataTypes) => {
    lastName: DataTypes.STRING,
    city: DataTypes.STRING
  }, {
-   sequelize,
+  sequelize,
    modelName: 'User',
  });
  return User;
