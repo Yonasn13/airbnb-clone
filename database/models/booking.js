@@ -22,4 +22,4 @@ const initBooking = (sequelize, DataTypes) => {
  return Booking;
 };
 
-export default initBooking(connection, DataTypes);
+export default initBooking(Connection, DataTypes);
