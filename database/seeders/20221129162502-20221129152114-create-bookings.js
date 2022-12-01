@@ -7,7 +7,9 @@ module.exports = {
      await queryInterface.bulkInsert('Bookings', [{
        startDate: new Date('22-11-2022'),
        endDate: new Date('25-11-2022'),
-       confirmed: true
+       confirmed: true,
+       createdAt: new Date(),
+       updatedAt: new Date()
      }], {});
     
   },
