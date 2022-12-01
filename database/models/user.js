@@ -1,8 +1,7 @@
 'use strict';
-const {
-  Model
-} = require('sequelize');
-module.exports = (sequelize, DataTypes) => {
+import { Connection } from '../connection';
+const { Model, DataTypes } = require('sequelize');
+const initUser = (sequelize, DataTypes) => {
   class User extends Model {
     /**
      * Helper method for defining associations.
@@ -11,6 +10,7 @@ module.exports = (sequelize, DataTypes) => {
      */
     static associate(models) {
       // define association here
+      User.hasMany(models.Booking)
     }
   }
   User.init({
@@ -23,3 +23,5 @@ module.exports = (sequelize, DataTypes) => {
   });
   return User;
 };
+
+export default initUser(Connection, DataTypes)
