@@ -3,6 +3,7 @@
 import connection from '../connection';
 const { Model, DataTypes } = require('sequelize');
 const initUser = (sequelize, DataTypes) => {
+
   class User extends Model {
     static associate(models) {
       User.hasMany(models.Flat);
@@ -18,7 +19,6 @@ const initUser = (sequelize, DataTypes) => {
     modelName: 'User',
   });
   return User;
-};
 
 export default initUser(connection, DataTypes)
 

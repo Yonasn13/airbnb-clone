@@ -5,6 +5,5 @@ export default function Details(props) {
             <h1>Flat Details</h1>
         </>
     )
-
 }
 
