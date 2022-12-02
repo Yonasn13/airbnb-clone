@@ -1,7 +1,8 @@
-
-import flatsController from '../controllers/flats'
+import styles from '../styles/Home.module.css'
+import flatsController from '../controllers/flatsController'
 import Card from '../components/card'
 import Navbar from '../components/navbar'
+
 export default function Home(props) {
   const flats = props.flats
   console.log(flats)
