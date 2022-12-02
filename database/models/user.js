@@ -19,6 +19,6 @@ const initUser = (sequelize, DataTypes) => {
     modelName: 'User',
   });
   return User;
-
+};
 export default initUser(connection, DataTypes)
 

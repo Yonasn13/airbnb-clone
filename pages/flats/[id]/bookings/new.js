@@ -5,7 +5,6 @@ const Flat = props => {
   const flat = props.flat
   return (
     <>
-
     <h1>Request to Book {flat.address}</h1>
     <h3>Your Trip </h3>
     <form action="/api/flats" method="POST">
