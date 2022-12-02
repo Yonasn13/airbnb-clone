@@ -1,4 +1,4 @@
-import userController from "../controllers/flatsController"
+import userController from "../../../controllers/flatsController"
 
 export default function coach(props) {
     const flats = props.flats
@@ -17,7 +17,7 @@ export default function coach(props) {
                 ))}
             </div>
             <div>
-                <form action="/bookings/new" method="POST">
+                <form action="/flats/1/bookings/new" method="POST">
                     <input hidden name="flatId" value={flats.id} />
                     <label htmlFor="startDate">Start Date</label>
                     <input type='date' id="startDate" name="startDate" />
