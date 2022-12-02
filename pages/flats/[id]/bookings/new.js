@@ -1,25 +1,27 @@
-import flatsController from "../../../controllers/flatsController.js"
+import flatsController from "../../../../controllers/flatsController"
 
 
-const Flat = props => {
+export default function Flat (props) {
   const flat = props.flat
   return (
     <>
 
     <h1>Request to Book {flat.address}</h1>
     <h3>Your Trip </h3>
-    <form action="/api/flats" method="POST">
+    <form action="/flats/${id}/" method="POST">
       <input hidden name="flatId" value={flat.id}/>
       <label htmlFor="startDate">Start Date</label>
       <input type='date' id="startDate" name="startDate" />
       <label htmlFor="endDate">End Date</label>
       <input type='date' id="endDate" name="endDate" />
       <br />
-      <label htmlFor="firstName">firstName</label>
+      <label htmlFor="firstName">First Name </label>
+      <input type="name" id="firstName"/>
       <br />
-      <label htmlFor="lastName">lastName </label>
+      <label htmlFor="lastName">Last Name </label>
+      <input type="name" id="lastName"/>
       <br />
-      <input type="REQUEST BOOKING" value="request booking"/>
+      <input type="submit" value="REQUEST BOOKING" onClick="submit"/>
     </form>
     </>
   )
@@ -32,5 +34,4 @@ export async function getServerSideProps(req, res) {
   }
 }
 
-export default Flat
 

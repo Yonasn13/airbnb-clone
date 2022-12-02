@@ -1,4 +1,4 @@
-import db from "../database"
+/*import db from "../database"
 
 const flatsController = {
  find: async (id) => {
@@ -15,4 +15,6 @@ const flatsController = {
  }
 }
 
-export default flatsController;
+find: async (id) => JSON.parse(JSON.stringify(await db.Flat.findOne({where: {id: id}, include: Booking}))),
+
+export default flatsController;*/
