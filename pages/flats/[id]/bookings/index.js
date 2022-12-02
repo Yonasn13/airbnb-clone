@@ -4,14 +4,14 @@ export default function Profile(props) {
     console.log(bookings)
     return (
         <>
-            <h1>List of trips</h1>
-            <ul>
+            <h1>List of Trips</h1>
+            <ol>
                 <li>Rome, IT</li>
                 <li>Freetown, SL</li>
                 <li>Washington DC, USA</li>
                 <li>London, UK</li>
 
-            </ul>
+            </ol>
         </>
     )
 
