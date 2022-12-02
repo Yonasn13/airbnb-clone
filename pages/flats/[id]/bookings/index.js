@@ -1,28 +1,23 @@
-import bookingsController from "../../../../controllers/bookings"
-export default function Profile(props) {
-    const bookings = props.bookings
-    console.log(bookings)
+import flatsController from "../../../../controllers/flatsController"
+
+export default function coach(props) {
+    const flats = props.flats
+    console.log(flats)
     return (
-        <>
-            <h1>List of Trips</h1>
-            <ol>
-                <li>Rome, IT</li>
-                <li>Freetown, SL</li>
-                <li>Washington DC, USA</li>
-                <li>London, UK</li>
-
-            </ol>
-        </>
+        <div>
+            <h1>List of Bookings</h1>
+            {flats.map(flat => (
+                <p key={flat.id} >Address: {flat.address}<br />
+                    Price: {flat.price}</p>
+            ))}
+        </div>
     )
-
 }
 
 export async function getServerSideProps(req, res) {
-    const id = req.query.id
-    const bookings = await bookingsController.findAll()
+    const flats = await flatsController.all()
     return {
-
-        props: { bookings },
+        props: { flats },
         // will be passed to the page component as props
     }
 }
