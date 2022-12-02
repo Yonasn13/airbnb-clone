@@ -6,7 +6,7 @@ const Booking = props => {
   return (
     <>
     <h1>We are the {booking.userId}</h1>
-    <h3>Book your 🚀</h3>
+    <h3>Book your </h3>
     <form action="/api/spaceships" method="POST">
       <input hidden name="spaceshipId" value={spaceship.id}/>
       <label htmlFor="startDate">Start Date</label>
