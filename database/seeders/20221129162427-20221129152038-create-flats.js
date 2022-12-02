@@ -10,7 +10,7 @@ module.exports = {
       price: 17,
       createdAt: new Date(),
       updatedAt: new Date()
-    }], {});
+  }], {});
 
   },
 

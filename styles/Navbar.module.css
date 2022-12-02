@@ -2,7 +2,7 @@
     background-color: #c43052;
     height: 7vh;
     width: 100%;
-    color: white;
+    color: rgb(210, 156, 156);
     display: flex;
     justify-content: space-around;
     align-items: center;
@@ -10,12 +10,12 @@
   
   .navlink a {
     text-decoration: none;
-    color: white;
+    color: rgb(224, 213, 213);
   }
   
   .navlink a:hover {
-    color: white;
-    background-color: rgb(162, 72, 72);
+    color: rgb(214, 200, 200);
+    background-color: rgb(138, 53, 69);
   }
   
   .avatar {

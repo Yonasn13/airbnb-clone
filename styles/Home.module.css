@@ -29,7 +29,7 @@
 }
 
 .title a {
-  color: #0070f3;
+  color: #c95862;
   text-decoration: none;
 }
 
@@ -88,8 +88,8 @@
 .card:hover,
 .card:focus,
 .card:active {
-  color: #0070f3;
-  border-color: #0070f3;
+  color: #395777;
+  border-color: #264f74;
 }
 
 .card h2 {
@@ -106,6 +106,9 @@
 .logo {
   height: 1em;
   margin-left: 0.5rem;
+}
+.pargraph{
+  margin: 0 5px;
 }
 
 @media (max-width: 600px) {
@@ -126,4 +129,5 @@
   .logo img {
     filter: invert(1);
   }
+
 }
