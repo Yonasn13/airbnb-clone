@@ -1,34 +1,36 @@
-import bookingsController from "../../../controllers/spaceshipsController.js"
+import flatsController from "../../../controllers/flatsController.js"
 
 
-const Booking = props => {
-  const booking = props.spaceship
+const Flat = props => {
+  const flat = props.flat
   return (
     <>
-    <h1>We are the {booking.userId}</h1>
-    <h3>Book your </h3>
-    <form action="/api/spaceships" method="POST">
-      <input hidden name="spaceshipId" value={spaceship.id}/>
+
+    <h1>Request to Book {flat.address}</h1>
+    <h3>Your Trip </h3>
+    <form action="/api/flats" method="POST">
+      <input hidden name="flatId" value={flat.id}/>
       <label htmlFor="startDate">Start Date</label>
       <input type='date' id="startDate" name="startDate" />
       <label htmlFor="endDate">End Date</label>
       <input type='date' id="endDate" name="endDate" />
       <br />
-      <label htmlFor="email">Email</label>
+      <label htmlFor="firstName">firstName</label>
       <br />
-      <input type='email' id="email" name="email" autoComplete="off"/>
+      <label htmlFor="lastName">lastName </label>
       <br />
-      <input type="submit" value="Book"/>
+      <input type="REQUEST BOOKING" value="request booking"/>
     </form>
     </>
   )
 }
 
 export async function getServerSideProps(req, res) {
-  const spaceship = await spaceshipsController.find(req.query.id)
+  const flat = await flatsController.find(req.query.id)
   return {
-    props: {spaceship}
+    props: {flat}
   }
 }
 
-export default Spaceship
+export default Flat
+
