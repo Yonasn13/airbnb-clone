@@ -1,10 +1,11 @@
-import flatsController from "../../../controllers/spaceshipsController.js"
+import flatsController from "../../../controllers/flatsController.js"
 
 
 const Flat = props => {
   const flat = props.flat
   return (
     <>
+
     <h1>Request to Book {flat.address}</h1>
     <h3>Your Trip </h3>
     <form action="/api/flats" method="POST">
@@ -32,3 +33,4 @@ export async function getServerSideProps(req, res) {
 }
 
 export default Flat
+
