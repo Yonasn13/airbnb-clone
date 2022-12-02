@@ -20,5 +20,5 @@ const initUser = (sequelize, DataTypes) => {
   });
   return User;
 };
+}
 export default initUser(connection, DataTypes)
-
