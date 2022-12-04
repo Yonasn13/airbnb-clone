@@ -1,10 +1,7 @@
-import db from '../../../database'
-import flatsController from '../../../controllers/flatsController'
 
-import flatsController from "../../../controllers/flatsController"
+import flatsController from '../../../controllers/flatsController'
 export default function coach(props) {
     const flats = props.flats
-    console.log(flats)
     return (
         <>
             <div>
@@ -19,7 +16,7 @@ export default function coach(props) {
                 ))}
             </div>
             <div>
-                <form action={`/flats/1/bookings/new`} method="POST">
+                <form action={`/flats/id/bookings/new`} method="POST">
                     <input hidden name="flatId" value={flats.id} />
                     <label htmlFor="startDate">Start Date</label>
                     <input type='date' id="startDate" name="startDate" />
@@ -36,7 +33,6 @@ export async function getServerSideProps(req, res) {
     const flats = await flatsController.all()
     return {
         props: { flats },
-        // will be passed to the page component as props
     }
 }
 

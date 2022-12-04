@@ -3,7 +3,6 @@ import flatsController from '../controllers/flatsController'
 import Card from '../components/card'
 import Navbar from '../components/navbar'
 import Link from 'next/link'
-import Image from 'next/image'
 
 
 export default function Home(props) {
@@ -13,10 +12,11 @@ export default function Home(props) {
     <>
       <div className={styles.container}>
       <Navbar></Navbar>
-      <Image className={styles.logo} src={'/images/hd-airbnb-logo-drawing.png'} alt='airbnb logo' width={100} height={300}/>
+      
         {flats.map(flat => (<Card flat={flat} key={flat.id}></Card>))}
+       
         <Link href={`/flats/${flats.id}/`}/>
-        <Link href={"/owner/profile.js"}/>
+        <Link href={"/flats/profile/new.js"}/>
       </div>
     </>
   )
