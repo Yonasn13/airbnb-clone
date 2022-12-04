@@ -4,7 +4,7 @@
     width: 100%;
     color: rgb(210, 156, 156);
     display: flex;
-    justify-content: space-around;
+    justify-content: space-evenly;
     align-items: center;
   }
   
