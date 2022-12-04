@@ -7,7 +7,7 @@ export default function Component({flat}) {
     <Link href = {`/flats/${flat.id}`}>
       <div className = {styles.card}>
         <h3>{flat.address}</h3>
-        <p>{flat.price}</p>
+        <p>${flat.price}</p>
       </div>
     </Link>
   )

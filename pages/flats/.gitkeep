@@ -1,4 +1,4 @@
-import flatsController from "../../../../controllers/flatsController"
+/*import flatsController from "../../../../controllers/flatsController"
 
 
 export default function Flat(props) {
@@ -33,6 +33,5 @@ export async function getServerSideProps(req, res) {
   return {
     props: { flat }
   }
-}
-
+}*/
 

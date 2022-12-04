@@ -6,7 +6,9 @@ const initFlat = (sequelize, DataTypes) => {
   class Flat extends Model {
     static associate(models) {
       Flat.belongsTo(models.User);
-      Flat.belongsToMany(models.User, { through: models.Booking })
+      Flat.hasMany(models.Booking, {foreignKey: 'FlatId'})
+      //Flat.belongsToMany(models.User, { through: models.Booking })
+      
     }
   }
   Flat.init({
