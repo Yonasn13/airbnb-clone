@@ -7,17 +7,12 @@ import styles from '../../../styles/Home.module.css'
 export default function coach(props) {
     const flats = props.flats
     console.log(flats)
-import flatsController from "../../../controllers/flatsController"
-export default function coach(props) {
-    const flats = props.flats
-    console.log(flats)
     return (
         <>
             <h1>Flat Details</h1>
         </>
     )
 }
-
 export async function getServerSideProps(req, res) {
     const flats = await flatsController.find(req.query.id)
     return {
