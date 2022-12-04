@@ -1,8 +1,8 @@
-import flatsController from "../../../controllers/flatsController"
+import flatsController from "../../../../../controllers/flatsController"
 import Image from "next/image"
-import image from "../../image/houseForAirbnb.png"
-import Navbar from '../../../components/navbar'
-import styles from '../../../styles/Home.module.css'
+import image from "../../../../image/houseForAirbnb.png"
+import Navbar from '../../../../../components/navbar'
+import styles from '../../../../../styles/Home.module.css'
 
 export default function coach(props) {
     const flats = props.flats
@@ -24,7 +24,7 @@ export default function coach(props) {
                     </h4>
                 </div>
                 <div>
-                    <form action={`../api/flats`} method="POST">
+                    <form action={`../../../../api/bookings`} method="POST">
                         <input hidden name="flatId" value={flats.id} />
                         <label htmlFor="startDate">Start Date </label>
                         <input type='date' id="startDate" name="startDate" />

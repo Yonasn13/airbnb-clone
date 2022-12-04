@@ -3,6 +3,8 @@ import flatsController from '../controllers/flatsController'
 import Card from '../components/card'
 import Navbar from '../components/navbar'
 import Link from 'next/link'
+//import Image from 'next/image'
+//import image from '/image/houseForAirbnb'
 
 export default function Home(props) {
   const flats = props.flats
@@ -11,9 +13,14 @@ export default function Home(props) {
     <>
       <div className={styles.container}>
       <Navbar></Navbar>
-        <h1>Welcome to airbnb</h1>
-        {flats.map(flat => (<Card flat={flat} key={flat.id}></Card>))}
-        <Link href={`/flats/${flats.id}`}/>
+      <div>
+        <h1 className={styles.parag}>Welcome to airbnb</h1>
+      </div>
+      <div>
+        {flats.map(flat => (<Card flat={flat} key={flat.id}>
+          <Link href={`/profile/1/flats/${flat.id}`} />
+        </Card>))}
+      </div>
       </div>
     </>
   )

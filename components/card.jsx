@@ -1,14 +1,14 @@
 import Link from "next/link"
 import styles from "../styles/Home.module.css";
 
-export default function Component({flat}) {
+export default function Component({ flat }) {
 
   return (
-    <Link href = {`/flats/${flat.id}`}>
-      <div className = {styles.card}>
+    <div className={styles.card}>
+      <Link href={`/profile/1/flats/${flat.id}`}>
         <h3>{flat.address}</h3>
         <p>${flat.price}</p>
-      </div>
-    </Link>
+      </Link>
+    </div>
   )
 }

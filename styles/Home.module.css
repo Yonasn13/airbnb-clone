@@ -1,6 +1,10 @@
 .container {
   padding: 0 2rem;
 }
+.parag {
+  display: flex;
+  justify-content: space-around;
+}
 
 .main {
   min-height: 100vh;
