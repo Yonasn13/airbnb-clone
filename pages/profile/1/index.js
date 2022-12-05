@@ -9,12 +9,18 @@ export default function Pages(props) {
         <>
             <div className={styles.container}>
                 <Navbar></Navbar>
-                <div>
-                    <h3>
-                        <Link href="/">I will load pages/index.js file (HomePage)</Link><br/>
-                        <Link href="/profile/1/flats/">I will load pages/profile/1/flats/index.js file</Link><br/>
-                        <Link href={`/profile/1/flats/1`}>I will load pages/profile/1/flats/[id]/index.js file</Link><br/>
-                        <Link href={`/profile/1/bookings`}>I will load pages/profile/1/flats/[id]/bookings.js file</Link>
+                <div className={styles.container}>
+                    <h3 className={styles.card}>
+                        <Link href={`/`}>BOOK A HOUSE</Link>
+                    </h3>
+                    <h3 className={styles.card}>
+                        <Link href="/profile/1/flats/new">HOST YOUR HOUSE 💲🤑</Link>
+                    </h3>
+                    <h3 className={styles.card}>
+                        <Link href="/profile/1/flats/">LIST OF YOUR FLATS</Link>
+                    </h3>
+                    <h3 className={styles.card}>
+                        <Link href={`/profile/1/bookings`}>YOUR BOOKINGS 🚀</Link>
                     </h3>
                 </div>
             </div>

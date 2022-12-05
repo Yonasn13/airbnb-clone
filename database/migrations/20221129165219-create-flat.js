@@ -27,8 +27,15 @@ module.exports = {
         type: Sequelize.DATE
       }
     });
+    queryInterface.addColumn(
+      'Flats', 'imgSrc', Sequelize.STRING
+    ) 
   },
+  
   async down(queryInterface, Sequelize) {
     await queryInterface.dropTable('Flats');
+    queryInterface.removeColumn(
+      'Flats', 'imgSrc'
+    ) 
   }
 };

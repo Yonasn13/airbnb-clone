@@ -14,7 +14,8 @@ const initFlat = (sequelize, DataTypes) => {
   Flat.init({
     address: DataTypes.STRING,
     price: DataTypes.FLOAT,
-    UserId: DataTypes.INTEGER
+    UserId: DataTypes.INTEGER,
+    imgSrc: DataTypes.STRING
   }, {
     sequelize,
     modelName: 'Flat',
